@@ -28,6 +28,11 @@ public abstract class GenericDAOJpa<T> implements GenericDAO<T> {
 	}
 
 	@Override
+	public void merge(T entity) {
+		em.merge(entity);
+	}
+	
+	@Override
 	public void delete(T entity) {
 		em.remove(entity);
 	}

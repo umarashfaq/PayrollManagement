@@ -7,6 +7,7 @@ import com.umar.payroll.domain.Person;
 @Repository
 public class PersonDAOJpa extends GenericDAOJpa<Person> 
 	implements PersonDAO {
+	
 	@Override
 	protected Class<Person> getPersistentClass() {
 		return Person.class;

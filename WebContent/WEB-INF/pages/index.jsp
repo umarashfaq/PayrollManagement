@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Payroll Management System</h1>
+	<jsp:include page="/WEB-INF/pages/header.jsp"></jsp:include>
 </body>
 </html>

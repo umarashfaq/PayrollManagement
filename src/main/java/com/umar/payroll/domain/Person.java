@@ -7,18 +7,31 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name="persons")
 public class Person extends BaseEntity {
 	
+	@NotBlank
+	@Size(max=45)
 	@Column(name="first_name")
 	private String firstName;
 	
+	@NotBlank
+	@Size(max=45)
 	@Column(name="last_name")	
 	private String lastName;
+	
 	private Timestamp dob;
+	
 	private String phone;
+	
+	@NotBlank
+	@Email
 	private String email;
 	private String address;
 	
